@@ -926,7 +926,7 @@ ReactAgenda.defaultProps = {
   endAtTime: 0,
   cellHeight: 15,
   view:"agenda",
-  locale: "en",
+  locale: "pt",
   helper:true,
   items: [],
   autoScale:false,

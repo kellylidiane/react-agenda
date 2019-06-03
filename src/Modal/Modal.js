@@ -2,19 +2,21 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
+import './Modal.css';
+
 class ModalView extends Component {
   render() {
     if(this.props.frameless){
-      return <div className="modal-nude  box-card">
-              <a onClick={this.props.closeFunc} className="modal-close">X</a>
-                <div className="modal-title"> {this.props.title}</div>
+      return <div className='modal-agenda-nude  box-card'>
+              <a onClick={this.props.closeFunc} className='modal-agenda-close'>X</a>
+                <div className='modal-agenda-title'> {this.props.title}</div>
          {this.props.children}
         </div>
     }
 
-    return <div className="modal  box-card">
-      <a onClick={this.props.closeFunc} className="modal-close">X</a>
-              <div className="modal-title"> {this.props.title}</div>
+    return <div className='modal-agenda  box-card'>
+      <a onClick={this.props.closeFunc} className='modal-agenda-close'>X</a>
+              <div className='modal-agenda-title'> {this.props.title}</div>
        {this.props.children}
       </div>
   }
@@ -33,7 +35,7 @@ ModalView.defaultProps = {
   frameless: false
 }
 
-export default class Modal extends Component {
+export default class ModalAgenda extends Component {
 
 constructor(props){
   super(props);
@@ -45,7 +47,7 @@ constructor(props){
   componentDidMount(){
   this.modalWrapperTarget = document.createElement('div')
 
-  this.modalWrapperTarget.className= "modal-wrapper";
+  this.modalWrapperTarget.className= 'modal-agenda-wrapper';
 
   this.modalWrapperTarget.addEventListener('click' , this.clickedOutside);
   this.modalWrapperTarget.addEventListener('click' , this.clickedOutside);
@@ -64,7 +66,7 @@ clickedOutside(e){
       return false;
   }
 
-  if(this.props.clickOutside && e.target.classList.contains('modal-wrapper')){
+  if(this.props.clickOutside && e.target.classList.contains('modal-agenda-wrapper')){
     this.props.clickOutside(e)
   }
 
@@ -101,7 +103,7 @@ componentDidUpdate(){
   }
 }
 
-Modal.propTypes = {
+ModalAgenda.propTypes = {
   title: PropTypes.string,
   frameless: PropTypes.bool,
   children: PropTypes.element,
@@ -109,7 +111,7 @@ Modal.propTypes = {
 
 };
 
-Modal.defaultProps = {
+ModalAgenda.defaultProps = {
   title: '',
   frameless: false
 }

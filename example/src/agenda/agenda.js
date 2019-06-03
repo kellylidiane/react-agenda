@@ -5,13 +5,10 @@ import { ReactAgenda , ReactAgendaCtrl, guid , getUnique , getLast , getFirst , 
 
 var now = new Date();
 
-require('moment/locale/fr.js');
+require('moment/locale/pt.js');
     var colors= {
-      'color-1':"rgba(102, 195, 131 , 1)" ,
-      "color-2":"rgba(242, 177, 52, 1)" ,
-      "color-3":"rgba(235, 85, 59, 1)" ,
-      "color-4":"rgba(70, 159, 213, 1)",
-      "color-5":"rgba(170, 59, 123, 1)"
+      'color-1': 'rgba(55, 119, 188 , 1)',
+      'color-2': 'rgba(221, 113, 47, 1)',
     }
 
 
@@ -21,7 +18,7 @@ var items = [
     name          : 'Meeting , dev staff!',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0),
-    classes       : 'color-1 color-4'
+    classes       : 'color-1'
   },
   {
    _id            :guid(),
@@ -35,14 +32,14 @@ var items = [
     name          : 'Conference , plaza',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 11 , 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 14 ,30),
-    classes       : 'color-4'
+    classes       : 'color-1'
   },
   {
    _id            :'event-4',
     name          : 'Customers issues review',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+2, 10, 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+2, 15, 0),
-    classes       : 'color-3'
+    classes       : 'color-2'
 
   },
   {
@@ -50,14 +47,14 @@ var items = [
     name          : 'Group activity',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+3, 10, 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+3, 16, 30),
-    classes       : 'color-4'
+    classes       : 'color-2'
   },
   {
     _id           :'event-6',
     name          : 'Fun Day !',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+7, 9, 14),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+7, 17),
-    classes       : 'color-3'
+    classes       : 'color-1'
   }
 ];
 
@@ -217,7 +214,7 @@ this.setState({numberOfDays:days})
           startAtTime={8}
           endAtTime={23}
           cellHeight={this.state.cellHeight}
-          locale="fr"
+          locale="pt"
           items={this.state.items}
           numberOfDays={this.state.numberOfDays}
           headFormat={"ddd DD MMM"}

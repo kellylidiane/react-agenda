@@ -1,9 +1,8 @@
 
 
 :root {
-  --selection:rgba(102, 195, 131 , 0.7);;
+  --selection:rgba(55, 119, 188, 0.5);
 }
-
 
 .agenda__table > table {
   border-spacing: 0;

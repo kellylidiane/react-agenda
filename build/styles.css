@@ -19,7 +19,7 @@ height: 12px;
 
 
 .agenda-cell-item {
-    font-size: 14px;
+    font-size: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -201,9 +201,8 @@ padding: 8px;
 
 
 :root {
-  --selection:rgba(102, 195, 131 , 0.7);;
+  --selection:rgba(55, 119, 188, 0.5) !important;
 }
-
 
 .agenda__table > table {
   border-spacing: 0;
@@ -362,7 +361,7 @@ padding: 8px;
 
 .agenda__cell.\--time-now {
     font-weight: bold;
-    border-right: 5px solid rgb(102, 195, 131);
+    border-right: 5px solid rgb(179, 180, 180);
 }
 
 .agenda__cell.\--time:hover, .agenda__cell.\--time-now:hover , .agenda__cell.\--head:hover{
